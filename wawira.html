@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- 
+    Use icons. -->
+    <script
+      src="https://kit.fontawesome.com/4fd11e560e.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+
+      * {
+        font-size: large;
+      }
+      
+      .container {
+        display: flex;
+        padding-top:2%;
+      }
+ 
+      .plan {
+        width: 73%;
+        margin-top: 2%;
+      }
+
+      .dev {
+        width: 25%;
+        text-align: center;
+        margin-top: 5%;
+        font-weight: 500;
+        font-size: 1.5rem;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 2px solid #000;
+        text-align: left;
+        padding: 8px;
+      }
+
+      /* tr:nth-child(even) {
+        /* background: #fee7e7; */
+      /* } */ */
+
+      th {
+        text-align: center;
+        background: #fff;
+      }
+
+      /* .img_container {
+        margin-top: 10%;
+      } */
+
+      img {
+        width: 90%;
+        border-radius: 8%;
+      }
+
+      /* figcaption {
+        margin-top: 5%;
+        font-size: larger;
+      } */
+
+      .title {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1%;
+      }
+      
+      .greetings {
+        font-weight: 800;
+        font-size: 1.5rem;
+      }
+
+      .greetings {
+        font-weight: 800;
+        font-size: 1.5rem;
+      }
+
+      a {
+        text-decoration: none;
+        margin-left:1%;
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+      /*  */
+      /* Svg image section and animate */
+      svg{
+            height: 60%;
+            width: 80%;
+            margin-top: 2%;
+            margin-left:20%;
+            margin-top: 20%;
+        }
+        .name {
+            text-transform: uppercase;
+            animation: stroke 3s infinite alternate;
+            stroke:black;
+            font-size: 12px;
+        }
+        @keyframes stroke {
+            0%   {
+                fill:black; stroke:darkblue;
+                stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 0.05;
+            }
+            80%  {fill: white; stroke:burlywood; stroke-width: 0.1; }
+            100% {
+                fill:blue; stroke:white; 
+                stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+            }
+        }
+        .mycv{
+            font-size: 5px;
+            font-style: italic;
+        }
+
+      /* For viewing in smalll mobile screens */
+      @media (max-width: 768px){
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      table td::before{
+        content: attr(data-label);
+      }
+    }
+    </style>
+  </head>
+  <body onload="typeWriter()">
+    <div id="container" class="container">
+      <div id="dev" class="dev"> 
+          <!--
+            Type setting greetings. -->
+        <p id="greetings" class="greetings"></p>
+        <!-- 
+          This the svg part that contains the svg animated image and the text
+         -->
+        <section>
+          <svg
+              viewBox="0 0 160 128"
+              xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                  <clipPath id="svgPath">
+                    <path d="M 90,80 A 1 1 0 0 1 2  50 A 2 2 -1 1 1 90 80"/>    
+                  </clipPath>
+              </defs>
+              
+              <image href="http://drive.google.com/uc?export=view&id=1xlKJbMwmZw6unrBj8RCWpXBytNXS4kKX" x="-9" y="20" height="150" width="130" clip-path= "url(#svgPath)">
+                  <!-- <animateTransform
+                  attributeName="transform"
+                  attributeType="XML"
+                  type="rotate"
+                  from="0 10 40"
+                  to="360 30 20"
+                  dur="5s"
+                  repeatCount="indefinite" /> -->
+                  <animateMotion dur="3s" repeatCount="indefinite"
+                  path="M 4, 2 a 5,3 0 1,0 1,0"/>
+                  <animate attributeName="dy" values="0;5;0" dur="10s" repeatCount="indefinite"/>
+              </image>
+              <text class="name" x="1" y="9" >I am Wawira Carolyne </text>
+              
+          </svg>
+        </section>
+        <figcaption>
+          My Stack: <br/>
+          <a href="https://github.com/Wangaricarol">
+            <i class="fa-brands fa-github"></i>Github
+          </a>
+        </figcaption>
+        <text class="mycv" x="20" y="63"><a href="http://206.189.207.206/carol/wangari/cv.html">wayann hub</a></text>
+            
+      </div>
+      <div id="plan" class="plan">
+        <div id="title" class="title">2023 Road Map</div>
+        <table>
+          <thead>
+              <tr>
+                  <th>No.</th>
+                  <th>Application</th>
+                  <th>problem</th>
+                  <th>Objective</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>Metavisio Application</td>
+                  <td>Mutall Data Managers cant visualize the data models/class diagrams in the 8.1 version</td>
+                  <td>Do an application by the name metavisuo to aid in diagram generation.
+                      <li>Acquire more knowledge on SVG,Js,Ts</li>
+                  </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>tracker</td>
+                <td>
+                  <li>Research on how to use github to track changes and my projects</li>
+                </td>
+                <td>git knowledge</td>
+              <tr>
+                <td>3</td>
+                <td>Registrar</td>
+                <td>There is conjestion and mismanagement of time esecially when the people turn
+                  up in large numbers and all have to be registered to be allowed to come in to the venue.
+                </td>
+                <td>
+                  3.1) Build a registration system for self registration of members on arrival to the conference</br>
+                  3.2) In future think of building an entire management system apart from registration part</br>
+                  3.3) Think of how to assure security for members providing their details</br>
+                  3.4) Visit at least two conferences and call a person who have experience in conference management 
+                      to aid in research on how they are managed.</br>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Masai Cafe website</td>
+                <td>Poor marketing strategies of the cafe,
+                  whereby currently they are depending on the facebook platform and whatsapp.
+                </td>
+                <td>
+                  Improve the Maasai cafe website to include services like;
+                  <br>(4.1)Food/beverage marketing support
+                  <br>(4.2)Food sales execution
+                  <br>(4.3)Outside catering 
+                  <br> and many others 
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Inventory control system</td>
+                <td>
+                 The masai are recording and manging their stocks manually.<br>
+                 thus makes it difficult to track how the commodities after the purses are used.
+                </td>
+                <td>
+                  Develop an application that is capable of managing the store activities</br>
+                  5.1) A system that support real-time,inventory tracking.<br>
+                  5.2) Automate the process of recording the stock.<br>
+                  5.3) Generate useful reports i.e inventory summaries and totals,
+                   transaction reports and order history to reduce wastage,
+                </td>
+              </tr>    
+          </tbody>
+      </table>
+      </div>
+    </div>
+
+    <script>
+
+      function display_greetings() {
+        var today = new Date();
+        var hourNow = today.getHours();
+        var greeting;
+
+        if (hourNow > 15) {
+          greeting = "Good Evening";
+        } else if (hourNow > 12) {
+          greeting = "Good Afternoon";
+        } else if (hourNow > 0) {
+          greeting = "Good Morning";
+        } else {
+          greeting = "Welcome";
+        }
+
+        return greeting;
+      }
+      
+      var i = 0;
+      var txt = display_greetings();
+      var speed = 250;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("greetings").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+  </body>
+</html>
